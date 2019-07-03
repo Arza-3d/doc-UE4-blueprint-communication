@@ -42,34 +42,51 @@
   </header>
   <main class="aside-nav-target-r3">
 
-      <div data-title-r3="material blend">
+      <div data-title-r3="direct BP comm">
+        <h2>direct BP comm examples:</h2>
 
-        </script>
-        <h2>BP comm examples:</h2>
-
-        <h3>not BP comm (ex: pain volume)</h3>
+        <h3>pain volume (not BP comm)</h3>
         <section>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/EM_HYqQdToE?start=1580&end=1589&controls=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe src="https://blueprintue.com/render/cbhcayag" scrolling="no" style="height:480px;width:80%"></iframe>
+
+          <iframe src="https://blueprintue.com/render/cbhcayag" scrolling="no" style="height:230px;width:80%"  allowfullscreen></iframe>
         </section>
 
-        <h3>direct BP comm (ex: healing volume)</h3>
-        <!--1894-->
+        <h3>healing volume</h3>
         <section>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/EM_HYqQdToE?start=1894&end=1913&controls=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe src="https://blueprintue.com/render/w_7omxkf" scrolling="no" style="height:480px;width:80%"></iframe>
+          <iframe src="https://blueprintue.com/render/35mc34z3" scrolling="no" style="height:480px;width:80%" allowfullscreen></iframe>
         </section>
 
-        <h3>BP interface (ex: door)</h3>
+      </div>
+      <div data-title-r3="BP interface">
+        <h2>BP interface examples:</h2>
+
+        <h3>open/closing door</h3>
         <section>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/EM_HYqQdToE?start=4835&end=4855&controls=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe src="https://blueprintue.com/render/w_7omxkf" scrolling="no" style="height:480px;width:80%"></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EM_HYqQdToE?start=4835&end=4856&controls=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://blueprintue.com/render/j729ot4u" scrolling="no" style="height:480px;width:80%" allowfullscreen></iframe>
         </section>
 
-        <h3>BP interface (ex: level comm)</h3>
+        <h3>get door interact state</h3>
         <section>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EM_HYqQdToE?start=4907&end=4917&controls=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://blueprintue.com/render/9-sbka3j" scrolling="no" style="height:480px;width:80%" allowfullscreen></iframe>
+        </section>
+
+
+
+        <h3>comm with sublevel</h3>
+        <section>
+
           <iframe width="560" height="315" src="https://www.youtube.com/embed/EM_HYqQdToE?start=5330&end=5337&controls=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe src="https://blueprintue.com/render/w_7omxkf" scrolling="no" style="height:480px;width:80%"></iframe>
+          <p>BP interface can communicate with sublevel but not with persistent level.</p>
+          <ol>
+            <li>create new sublevel name "ScriptSubLevel"</li>
+            <li>make sure the streaming method is <b>always loaded</b></li>
+            <li>edit the sublevel blueprint and implement interface <b>iInteractable</b></li>
+          </ol>
+          <iframe src="https://blueprintue.com/render/jz63s9j7" scrolling="no" style="height:200px;width:80%" allowfullscreen></iframe>
         </section>
 
         <h3>BP event dispatch (ex: health bar)</h3>
