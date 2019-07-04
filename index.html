@@ -61,8 +61,17 @@
           </p>
 
           <iframe src="https://www.youtube.com/embed/EM_HYqQdToE?start=1580&end=1589"></iframe>
-
-          <iframe src="https://blueprintue.com/render/cbhcayag"></iframe>
+          <ol>
+            <li>drop PainCausingVolume inside the level, make the it 10 dps</li>
+            <li>also drop cube and textRender near it, so u know where it is</li>
+            <li>inside <code>ThirdPersonCharacter</code>:</li>
+              <ol>
+                <li>add float variable, name it <b>Health</b> set it to 100</li>
+                <li>then copy paste this BP:
+                  <iframe src="https://blueprintue.com/render/cbhcayag"></iframe>
+                </li>
+              </ol>
+          </ol>
         </section>
 
         <h3>healing volume</h3>
@@ -80,7 +89,17 @@
             health.
           </p>
           <iframe src="https://www.youtube.com/embed/EM_HYqQdToE?start=1894&end=1913"></iframe>
-          <iframe src="https://blueprintue.com/render/35mc34z3"></iframe>
+          <ol>
+            <li>create actorBP name it <code>HealingVolume</code>, then inside this
+              <ol>
+                <li>add boxCollision as BP component</li>
+                <li>copy paste this BP:</li>
+                <iframe src="https://blueprintue.com/render/35mc34z3"></iframe>
+              </ol>
+            </li>
+            <li>drop HealingVolume inside the level, <kbd>Alt</kbd> + move drag to duplicate the TextRender and the Cube</li>
+          </ol>
+
         </section>
 
       </div>
@@ -105,7 +124,32 @@
             </code>
           </p>
           <iframe src="https://www.youtube.com/embed/EM_HYqQdToE?start=4835&end=4856"></iframe>
-          <iframe src="https://blueprintue.com/render/j729ot4u"></iframe>
+          <ol>
+            <li>add 2 action inputs, first one name it <b>InteractButton</b> assign it to <kbd>E</kbd>, and second one name it <b>QueryData</b> assign it to <kbd>F</kbd></li>
+            <li>create BPinterface, name it <code>iInteractable</code>, inside this:
+              <ul>
+                <li>add function, name it <b>Interact</b></li>
+                <li>add function that has <u>bool output</u>, name it <b>getInteractState</b></li>
+              </ul>
+            </li>
+            <li>inside <code>ThirdPersonCharacter</code>, copypaste this:
+              <iframe src="https://blueprintue.com/render/j729ot4u"></iframe>
+            </li>
+            <li>create actorBP, name it <code>InteractiveDoor</code>, inside this:
+              <ol>
+                <li>add components; <b>boxCollision</b> and <b>cube</b>, with location <code>(X=0.0,Y=0.0,Z=160.0)</code> and scale <code>(X=1.5,Y=0.25,Z=3.25)</code></li>
+                <li>make sure <b>boxCollision</b> collision visibility is block, so it can be traced</li>
+                <li>implement iInteractable interface</li>
+                <li>add bool var, name it <b>InteractState</b></li>
+                <li>then copypaste this:
+                  <iframe src="https://blueprintue.com/render/nem712n5"></iframe>
+                </li>
+              </ol>
+            </li>
+
+          </ol>
+
+
         </section>
 
         <h3>get door interact state</h3>
@@ -126,7 +170,12 @@
             </code>
           </p>
           <iframe src="https://www.youtube.com/embed/EM_HYqQdToE?start=4907&end=4917"></iframe>
-          <iframe src="https://blueprintue.com/render/9-sbka3j"></iframe>
+          <ul>
+            <li>inside <code>ThirdPersonCharacter</code> copypaste this:
+              <iframe src="https://blueprintue.com/render/9-sbka3j"></iframe>
+            </li>
+          </ul>
+
         </section>
 
 
@@ -151,12 +200,19 @@
           <iframe src="https://www.youtube.com/embed/EM_HYqQdToE?start=5330&end=5337"></iframe>
           <p>BP interface can communicate with sublevel but not with persistent level.</p>
           <ol>
-            <li>create new sublevel name "ScriptSubLevel"</li>
-            <li>make sure the streaming method is <b>always loaded</b></li>
-            <li>in <b>iInteractable</b> make new function <b>LevelComm</b> that will return a bool</li>
-            <li>edit the sublevel blueprint and implement interface <b>iInteractable</b></li>
+            <li>inside <code>iInteractable</code> add new function <b>LevelComm</b> that will return a bool</li>
+            <li>create new sublevel name <code>ScriptSubLevel</code>, then inside this;
+              <ul>
+                <li>make sure the streaming method is <b>always loaded</b></li>
+                <li>implement iInteractable interface</li>
+                <li>hard coded the <b>LevelComm</b> function to ouput string that say <code>"You have successfully communicate with sublevel"</code></li>
+              </ul>
+            </li>
+            <li>then inside <code>ThirdPersonCharacter</code> copypaste this:
+              <iframe src="https://blueprintue.com/render/jz63s9j7"></iframe>
+            </li>
           </ol>
-          <iframe src="https://blueprintue.com/render/jz63s9j7"></iframe>
+
         </section>
       </div>
       <div data-title-r3="event dispatcher">
@@ -164,7 +220,7 @@
         <h3>health bar</h3>
         <section>
           <iframe src="https://www.youtube.com/embed/EM_HYqQdToE?start=7416&end=7437"></iframe>
-          <iframe src="https://blueprintue.com/render/w_7omxkf"></iframe>
+          <iframe src="https://blueprintue.com/render/ih6kfp8-"></iframe>
         </section>
 
         <h3>death (bonus)</h3>
